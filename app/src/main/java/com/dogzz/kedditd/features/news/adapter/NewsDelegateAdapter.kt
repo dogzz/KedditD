@@ -9,6 +9,7 @@ import com.dogzz.kedditd.commons.adapter.ViewTypeDelegateAdapter
 import com.dogzz.kedditd.commons.extensions.getFriendlyTime
 import com.dogzz.kedditd.commons.extensions.inflate
 import com.dogzz.kedditd.commons.extensions.loadImg
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.news_item.view.*
 
 /**
@@ -27,7 +28,7 @@ class NewsDelegateAdapter : ViewTypeDelegateAdapter {
     class TurnsViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder(
                         parent.inflate(R.layout.news_item)) {
         fun bind(item: RedditNewsItem) = with(itemView) {
-            //Picasso.with(itemView.context).load(item.thumbnail).into(img_thumbnail)
+//            Picasso.with(itemView.context).load(item.thumbnail).into(img_thumbnail)
             img_thumbnail.loadImg(item.thumbnail)
             description.text = item.title
             author.text = item.author
