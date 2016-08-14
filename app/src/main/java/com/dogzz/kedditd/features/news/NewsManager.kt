@@ -1,6 +1,7 @@
 package com.dogzz.kedditd.features.news
 
-import com.dogzz.kedditd.api.RestAPI
+import com.dogzz.kedditd.api.NewsAPI
+import com.dogzz.kedditd.api.NewsRestAPI
 import com.dogzz.kedditd.commons.RedditNews
 import com.dogzz.kedditd.commons.RedditNewsItem
 import rx.Observable
@@ -11,7 +12,7 @@ import rx.Observable
  * like an API call) in another context (in this case in a new thread).
  * Created by afon on 13.08.2016.
  */
-class NewsManager(private val api: RestAPI = RestAPI()) {
+class NewsManager(private val api: NewsAPI = NewsRestAPI()) {
     fun getNews(after: String, limit: String = "10"): Observable<RedditNews> {
         return Observable.create {
             subscriber ->

@@ -15,6 +15,9 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import com.dogzz.kedditd.features.news.NewsFragment
 
+/**
+ * https://medium.com/@juanchosaravia/learn-kotlin-while-developing-an-android-app-introduction-567e21ff9664#.y6fcywtl2
+ */
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
